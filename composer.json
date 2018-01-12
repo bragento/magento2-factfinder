@@ -1,5 +1,5 @@
 {
-  "name": "flagbit/module-factfinder",
+  "name": "bragento/module-factfinder",
   "description": "FACT-Finder integration module for Magento 2",
   "require": {
     "fact-finder/fact-finder-php-library": "1.2.1"
