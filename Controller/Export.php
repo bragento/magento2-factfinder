@@ -20,17 +20,12 @@ class Export extends \Magento\Framework\App\Action\Action
         parent::__construct($context);
     }
 
-    public function preDispatch()
+    public function execute()
     {
         $password = md5($this->_scopeConfig->getValue(self::XML_AUTH_PASSWORD_PATH));
 
         if ($password == '' || $password != $this->getRequest()->getParam('key')) {
             $this->getActionFlag()->set('', self::FLAG_NO_DISPATCH, true);
         }
-    }
-
-    public function execute()
-    {
-
     }
 }
